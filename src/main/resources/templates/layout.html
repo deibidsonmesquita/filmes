@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">Top Filmes</title>
+
+    <link th:href="@{/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/css.css}" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container" layout:fragment="main">
+
+    <nav th:replace="layouts/_topo :: topo"/>
+
+    <main role="main" layout:fragment="content">
+        <p>Page content goes here</p>
+    </main>
+
+</div>
+
+<footer th:replace="layouts/_rodape :: rodape"/>
+
+</body>
+</html>

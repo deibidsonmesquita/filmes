@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt" layout:decorate="~{layout}"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Listagem top 100</title>
+</head>
+
+<body>
+
+
+<div layout:fragment="content">
+    <br>
+    <p><a class="btn btn-primary" th:href="@{/filmes/novo}">Cadastrar Novo Filme</a></p>
+    <h3><small class="text-muted">Filmes cadastrados</small></h3>
+    <div th:switch="${filmes}">
+        <h2 th:case="null">Nenhum registro!</h2>
+        <div th:case="*">
+            <table class="table table-hover table-sm">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>Genero</th>
+                    <th>Ano</th>
+                    <th>Diretor</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr data-th-each="filme : ${filmes}">
+                    <td data-th-text="${filme.id}">...</td>
+                    <td data-th-text="${filme.nome}">...</td>
+                    <td data-th-text="${filme.genero}">...</td>
+                    <td data-th-text="${filme.lancamento}">...</td>
+                    <td data-th-text="${filme.diretor.nome}">...</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
