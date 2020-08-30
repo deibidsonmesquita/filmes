@@ -35,8 +35,8 @@ public class FilmesController {
     }
 
     @PostMapping("salvar")
-    public String salvar(Filme filme, Model model, @RequestParam("id_diretor") long id_diretor) {
-        filme.setDiretor(diretorRepository.findById(id_diretor));
+    public String salvar(Filme filme, Model model) {
+        // filme.setDiretor(diretorRepository.findById(id_diretor));
         filmesRepository.save(filme);
         model.addAttribute("filmes", filmesRepository.findAll());
         return "/filmes/home";

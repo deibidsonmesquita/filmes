@@ -37,7 +37,7 @@
 
         <div class="form-group">
             <label for="dir">Diretor</label>
-            <select id="dir" th:field="*{id_diretor}">
+            <select id="dir" th:field="*{diretor}">
 
                 <option th:each="d : ${diretores}"
                         th:name="id_diretor" th:value="${d.id}" th:text="${d.nome}">
