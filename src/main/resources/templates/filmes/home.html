@@ -34,6 +34,14 @@
                     <td data-th-text="${filme.genero}">...</td>
                     <td data-th-text="${filme.lancamento}">...</td>
                     <td data-th-text="${filme.diretor.nome}">...</td>
+                    <td colspan="2">
+                        <a class="btn btn-info btn-sm" th:href="@{/filmes/editar/{id} (id=${filme.id}) }" role="button">
+                            <span class="oi oi-brush" title="Editar">Editar</span>
+                        </a>
+                        <a th:href="@{/filmes/excluir/{id} (id=${filme.id}) }" type="button" class="btn btn-danger btn-sm">
+                            <span class="oi oi-circle-x" title="Exclusão desabilitada">Excluir</span>
+                        </a>
+                    </td>
                 </tr>
             </table>
         </div>

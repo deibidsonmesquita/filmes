@@ -15,7 +15,7 @@
     <description>Criação projecto filmes for Spring Boot de Play framework livro</description>
 
     <properties>
-        <java.version>14</java.version>
+        <java.version>11</java.version>
     </properties>
 
     <dependencies>
@@ -74,7 +74,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
 
     </dependencies>
 
